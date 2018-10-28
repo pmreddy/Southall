@@ -18,22 +18,21 @@ public class SouthallTest {
     @Test
     public void testSouthallSearch() throws InterruptedException {
         southAllPage.navigateToUrl("https://www.southalltravel.co.uk");
-        //southAllPage.navigateToUrl1("https://www.southalltravel.co.uk/flightresult.aspx");
         southAllPage.enterDestintionFromAndTo("London", "Mumbai");
+        System.out.println("After");
         southAllPage.selectDepartureAndReturnDates();
         southAllPage.selectPassengerInformation(1, 1, 1);
         southAllPage.selectAirlineAndClass("Air India", "Business");
         southAllPage.clickSearchButton();
-        southAllPage.expectedPage();
-        southAllPage.callUsNow();
+       // southAllPage.expectedPage();
+       // southAllPage.callUsNow();
         //southAllPage.backToSearchResults();
         //southAllPage.clickToCallUs();
-
-    }
+   }
 
     @After
     public void cleanUp() {
-        southAllPage.closeBrowser();
+       southAllPage.closeBrowser();
     }
 
 }
